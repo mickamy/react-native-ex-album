@@ -3,7 +3,7 @@
 // import a library to help create a Component
 import React from 'react';
 import { AppRegistry } from 'react-native';
-import Header from './src/components/header';
+import Header from './src/components/Header';
 
 // create a Component with JSX
 const App = () => (
