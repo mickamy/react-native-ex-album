@@ -8,6 +8,7 @@ const AlbumDetail = ({ album }) => {
     title,
     artist,
     thumbnail_image,
+    image,
   } = album;
 
   const {
@@ -15,6 +16,7 @@ const AlbumDetail = ({ album }) => {
     thumbnailStyle,
     textContainerStyle,
     headerTextStyle,
+    albumThumbnailStyle,
   } = styles;
 
   return (
@@ -30,6 +32,12 @@ const AlbumDetail = ({ album }) => {
           <Text style={headerTextStyle}>{title}</Text>
           <Text>{artist}</Text>
         </View>
+      </CardSection>
+      <CardSection>
+        <Image
+          style={albumThumbnailStyle}
+          source={{ uri: image }}
+        />
       </CardSection>
     </Card>
   );
@@ -55,7 +63,13 @@ const styles = {
 
   headerTextStyle: {
     fontSize: 18,
-  }
+  },
+
+  albumThumbnailStyle: {
+      width: null,
+      height: 300,
+      flex: 1,
+  },
 };
 
 export default AlbumDetail;
